@@ -26,7 +26,6 @@ app.post("/token/regist", (req, res) => {
   const token = req.body.token;
 
   if (!tokens.find((t) => t === token)) {
-    console.log("Token added");
     tokens.push(token);
   }
 
@@ -37,7 +36,6 @@ app.post("/token/regist", (req, res) => {
  * 메뉴 리스트 요청
  */
 app.get("/menu/list", (req, res) => {
-  console.log("Menu list requested", menus);
   res.json({ data: menus });
 });
 
